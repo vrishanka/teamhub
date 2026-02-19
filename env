@@ -1,0 +1,10 @@
+CI_ENVIRONMENT = development
+
+database.default.hostname = localhost
+database.default.database = teamhub
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+
+app.baseURL = 'http://localhost:8080/'
+
