@@ -1,16 +1,33 @@
-<h2>Login</h2>
+<?= $this->extend('layout') ?>
+<?= $this->section('content') ?>
 
-<?php if(session()->getFlashdata('error')): ?>
-    <p style="color:red;">
-        <?= session()->getFlashdata('error') ?>
-    </p>
-<?php endif; ?>
+<div class="container d-flex justify-content-center align-items-center" style="min-height:80vh;">
+    <div class="card shadow-sm p-4" style="width: 400px;">
+        <h3 class="text-center mb-4">Login</h3>
 
-<form method="post" action="/authenticate">
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
-    <button type="submit">Login</button>
-</form>
+        <?php if(session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+        <?php endif; ?>
 
-<a href="/register">Register</a>
+        <form action="/authenticate" method="post">
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+
+        <p class="text-center mt-3">
+            Don't have an account? <a href="/register">Register</a>
+        </p>
+    </div>
+</div>
+
+<?= $this->endSection() ?>
 

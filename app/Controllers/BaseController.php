@@ -42,4 +42,12 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
     }
+    protected function checkLogin()
+    {
+        if (!session()->get('user_id')) {
+            return redirect()->to('/login')->send();
+            exit;
+        }
+    }
+
 }
