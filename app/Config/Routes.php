@@ -1,8 +1,9 @@
 <?php
+$routes->get('/register', 'AuthController::register');
+$routes->post('/store', 'AuthController::store');
 
-use CodeIgniter\Router\RouteCollection;
+$routes->get('/login', 'AuthController::login');
+$routes->post('/authenticate', 'AuthController::authenticate');
 
-/**
- * @var RouteCollection $routes
- */
-$routes->get('/', 'Home::index');
+$routes->get('/logout', 'AuthController::logout');
+

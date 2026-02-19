@@ -25,11 +25,12 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
+    
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => '',
+        'username'     => 'root',
         'password'     => '',
-        'database'     => '',
+        'database'     => 'teamhub',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
