@@ -15,7 +15,7 @@ cd teamhub
 Composer install
 
 3. Create database
-Run database_schema.sql in MySQL:
+Run database_schema.sql in MySQL
 
 4. Run the application
 php spark serve
